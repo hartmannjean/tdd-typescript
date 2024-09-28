@@ -4,7 +4,6 @@ export class Maintenance {
   private maintenances: MaintenanceEntity[] = [];
 
   public scheduleMaintenance(params: MaintenanceEntity): boolean {
-    console.log(params)
     this.maintenances.push(params);
     return params.date < new Date(Date.now()) ? false : true
   }
